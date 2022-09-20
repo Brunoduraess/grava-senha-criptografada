@@ -3,7 +3,7 @@ if (isset($_POST['envia'])) {
 
     include('conexao.php');
 
-    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
+    $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); //Usa o password_hash para criptografar a senha.
 
     $result = mysqli_query($conexao, "INSERT INTO sua_tabela(campo_senha) VALUES (
             '" . utf8_decode($senha) . "')");
