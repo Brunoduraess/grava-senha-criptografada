@@ -1,5 +1,5 @@
 <?php
-if (isset($_POST['envia'])) { //se existir a var submit, ele vai salvar os dados no banco
+if (isset($_POST['envia'])) {
 
     include('conexao.php');
 
