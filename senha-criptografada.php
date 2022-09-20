@@ -1,12 +1,13 @@
 <?php
-if (isset($_POST['envia'])) {
+include('conexao.php'); //chama o arquivo de conexão com o BD
 
-    include('conexao.php');
-
+if (isset($_POST['envia'])) { //Caso exista um post do formulário, ele realiza as condições abaixo.
+    
     $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT); //Usa o password_hash para criptografar a senha.
-
+    
+    //Inserindo os dados no BD.
     $result = mysqli_query($conexao, "INSERT INTO sua_tabela(campo_senha) VALUES (
-            '" . utf8_decode($senha) . "')");
+            '" . $senha . "')");
 
 }
 ?>
