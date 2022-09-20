@@ -18,8 +18,7 @@ if (isset($_POST['envia'])) {
 </head>
 
 <body>
-
-    <form action="senha-criptografada.php" name="contactForm" id="contactForm" method="post" enctype="multipart/form-data">
+    <form action="senha-criptografada.php">
 
         <label>Informe uma senha:</label>
         <input type="password" name="senha">
